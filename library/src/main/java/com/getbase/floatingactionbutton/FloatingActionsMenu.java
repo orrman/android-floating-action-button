@@ -171,6 +171,11 @@ public class FloatingActionsMenu extends ViewGroup {
     mAddButton.setOnClickListener(new OnClickListener() {
       @Override
       public void onClick(View v) {
+            	  if (mExpanded)
+    		  ((View) v.getParent().getParent()).setBackgroundColor(0x00000000);
+    	  else
+//    		  SET BACKGROUND OPACITY WHEN CLICKED
+    		  ((View) v.getParent().getParent()).setBackgroundColor(0xD9000000);
         toggle();
       }
     });
